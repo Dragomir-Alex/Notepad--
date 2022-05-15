@@ -1,0 +1,45 @@
+﻿<Window x:Class="Notepad__.View.SearchBox"
+        x:Name="SearchBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad__.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Search..."
+        ResizeMode="NoResize"
+        Height="auto"
+        Width="300">
+    <Window.Icon>
+        <DrawingImage/>
+    </Window.Icon>
+    <Grid x:Name="SearchBoxGrid" Background="#E7E9BB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="ButtonGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Submit" 
+                    Click="SubmitButton_Click"
+                    Grid.Row="0"
+                    Width="100"
+                    Height="25"
+                    FontSize="14"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            <CheckBox
+                Name="SearchAll"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Search in all files"
+                FontSize="14"
+                Grid.Row="1"
+                Height="50"/>
+
+        </Grid>
+    </Grid>
+</Window>
